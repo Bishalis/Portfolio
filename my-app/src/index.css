@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4;
+  }
+
+  .section-divider {
+    @apply w-24 h-1 bg-blue-600 dark:bg-blue-500 mx-auto;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors;
+  }
+
+  .input-field {
+    @apply mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-colors;
+  }
+}
+
+@theme{
+ 
+}
+
+
+/* // Primary colors
+bg-black text-white         // Headers
+bg-amber-100 text-amber-900 // Accents
+bg-white text-gray-700      // Content
+bg-gray-50 text-gray-800    // Secondary */
+
+
+/* 
+// Primary colors
+bg-fuchsia-600 text-white   // Primary accent
+bg-yellow-400 text-gray-900 // Secondary accent
+bg-gray-900 text-gray-100   // Dark sections
+bg-white text-gray-800      // Light sections */
