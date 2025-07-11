@@ -2,30 +2,33 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import type { Project } from '../types';
 import Ecommerce from '../assets/Ecommerce.png';
+import Weather from '../assets/Weather.png';
+import Bookstore from '../assets/Bookstore.png';
 
 const projects: Project[] = [
   {
-    title: 'E-commerce Platform',
+    title: 'CWB E-commerce Platform',
     description: 'A full-stack e-commerce platform with user authentication, product management, and payment integration.',
     image: Ecommerce,
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/yourusername/taskmanager',
-    liveUrl: 'https://ecommerce-demo.com',
+    githubUrl: 'https://github.com/Bishalis/updated-Ecommerce',
+    liveUrl: 'https://updated-ecommerce-frontend.onrender.com/login',
   },
   {
-    title: 'Task Management App',
+    title: 'CWB Book Store',
     description: 'A collaborative task management application with real-time updates and team features.',
-    image: '/projects/taskmanager.jpg',
+    image: Weather,
     technologies: ['React', 'Firebase', 'Tailwind CSS'],
     githubUrl: 'https://github.com/yourusername/taskmanager',
     liveUrl: 'https://taskmanager-demo.com',
   },
+
   {
     title: 'Weather Dashboard',
     description: 'A weather dashboard that displays current and forecasted weather data using external APIs.',
-    image: '/projects/weather.jpg',
+    image: Bookstore,
     technologies: ['React', 'OpenWeather API', 'Chart.js'],
-    githubUrl: 'https://github.com/yourusername/weather-dashboard',
+    githubUrl: 'https://github.com/Bishalis/Portfolio',
     liveUrl: 'https://weather-demo.com',
   },
 ];
