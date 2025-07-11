@@ -4,28 +4,27 @@ import type { Experience as ExperienceType } from '../types';
 
 const experiences: ExperienceType[] = [
   {
-    title: 'Senior Frontend Developer',
-    company: 'Tech Company',
-    period: '2022 - Present',
-    description: 'Leading frontend development for enterprise applications, mentoring junior developers, and implementing best practices.',
+    title: 'Lead Developer',
+    company: 'Marketing Company',
+    period: 'Present',
+    description: 'Collaborating with a group of peers to build a marketing company from the ground up, focused on digital strategy, branding, and content creation.My role involves planning the company’s technical infrastructure, designing the website, and integrating tools for client management and analytics. This experience is helping me apply both my technical and creative skills in a real-world business environment..',
     technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
   },
   {
     title: 'Full Stack Developer',
-    company: 'Startup Inc',
-    period: '2020 - 2022',
-    description: 'Developed and maintained full-stack applications, implemented CI/CD pipelines, and optimized application performance.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
+    company: 'Group project',
+    period: '2023-2024',
+    description: 'Developed and maintained full-stack ecommerce applications, implemented optimized application performance, and payment gateway integration. Built a web application that allows users to browse and search books by category or keyword, with a clean UI and intuitive flow.',
+    technologies: ['React', 'Node.js', 'MongoDB', 'AWS','Express'],
   },
   {
     title: 'Frontend Developer',
-    company: 'Digital Agency',
-    period: '2018 - 2020',
-    description: 'Created responsive web applications and collaborated with designers to implement pixel-perfect UI components.',
-    technologies: ['React', 'JavaScript', 'SASS', 'Webpack'],
+    company: 'Personal projects',
+    period: '2022-2023',
+    description: 'Dedicated the first 6 months to mastering frontend fundamentals including HTML, CSS, JavaScript, and version control with Git. After building a strong foundation, I started building some small projects like a weather app, a todo list app and a calculator app.',
+    technologies: ['HTML', 'CSS', 'JavaScript','API','Git'],
   },
-];
-
+]
 const Experience = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,

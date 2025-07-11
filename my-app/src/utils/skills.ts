@@ -8,20 +8,18 @@ export const skills: Skill[] = [
   { name: 'HTML5', category: 'Frontend' },
   { name: 'CSS3', category: 'Frontend' },
   { name: 'Tailwind CSS', category: 'Frontend' },
-  { name: 'Next.js', category: 'Frontend' },
+  
   
   // Backend
   { name: 'Node.js', category: 'Backend' },
   { name: 'Express', category: 'Backend' },
   { name: 'MongoDB', category: 'Backend' },
-  { name: 'PostgreSQL', category: 'Backend' },
   { name: 'REST APIs', category: 'Backend' },
   
   // Tools
   { name: 'Git', category: 'Tools' },
   { name: 'GitHub', category: 'Tools' },
   { name: 'VS Code', category: 'Tools' },
-  { name: 'Docker', category: 'Tools' },
   { name: 'Figma', category: 'Tools' },
   
   // Soft Skills

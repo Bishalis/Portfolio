@@ -6,14 +6,14 @@ import Logo from '../assets/logo.png';
 
 const testimonials: Testimonial[] = [
   {
-    name: 'John Doe',
-    role: 'Senior Developer',
-    company: 'Tech Corp',
+    name: 'Lakpa Dorjee Tamang',
+    role: 'Web Designer',
+    company: 'Group project',
     quote: 'An exceptional developer who consistently delivers high-quality work. Their attention to detail and problem-solving skills are outstanding.',
     image: Logo,
   },
   {
-    name: 'Jane Smith',
+    name: 'Rahat Hasan',
     role: 'Product Manager',
     company: 'Startup Inc',
     quote: 'Working with this developer was a pleasure. They understood our requirements perfectly and delivered beyond our expectations.',

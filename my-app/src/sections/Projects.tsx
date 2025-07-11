@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import type { Project } from '../types';
-import Logo from '../assets/Logo.png';
+import Ecommerce from '../assets/Ecommerce.png';
 
 const projects: Project[] = [
   {
     title: 'E-commerce Platform',
     description: 'A full-stack e-commerce platform with user authentication, product management, and payment integration.',
-    image: Logo,
+    image: Ecommerce,
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     githubUrl: 'https://github.com/yourusername/taskmanager',
     liveUrl: 'https://ecommerce-demo.com',

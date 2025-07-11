@@ -44,8 +44,7 @@ const About = () => {
               seamless user experiences that make a difference.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-              or sharing my knowledge through technical writing.
+            Beyond the screen, I have a love for football, which keeps me active and sharp both mentally and physically. I’m currently expanding my skillset by diving into the world of Artificial Intelligence, exploring how it can be integrated efficiently into real-world applications to improve user experiences and optimize performance. Whether it’s writing clean code or learning how AI can enhance development workflows, I’m always driven by curiosity and a desire to grow.
             </p>
           </motion.div>
 

@@ -31,7 +31,7 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'GitHub',
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/dashboard',
       icon: (
         <svg
           className="h-6 w-6"
@@ -49,7 +49,7 @@ const Contact = () => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://www.linkedin.com/in/bishalshahi1/',
       icon: (
         <svg
           className="h-6 w-6"
@@ -63,7 +63,7 @@ const Contact = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:your.email@example.com',
+      url: 'mailto:shahibishal786526@gmail.com',
       icon: (
         <svg
           className="h-6 w-6"
