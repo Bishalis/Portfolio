@@ -19,12 +19,12 @@ const projects: Project[] = [
     description: 'A collaborative task management application with real-time updates and team features.',
     image: Weather,
     technologies: ['React', 'Firebase', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/yourusername/taskmanager',
+    githubUrl: 'https://github.com/Bishalis/BookStore',
     liveUrl: 'https://taskmanager-demo.com',
   },
 
   {
-    title: 'Weather Dashboard',
+    title: 'CWB Weather Dashboard',
     description: 'A weather dashboard that displays current and forecasted weather data using external APIs.',
     image: Bookstore,
     technologies: ['React', 'OpenWeather API', 'Chart.js'],
