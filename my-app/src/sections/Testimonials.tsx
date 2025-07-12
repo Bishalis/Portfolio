@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import type { Testimonial } from '../types';
-import Logo from '../assets/logo.png';
+import logo from '../assets/logo.png';
 
 const testimonials: Testimonial[] = [
   {
@@ -10,21 +10,21 @@ const testimonials: Testimonial[] = [
     role: 'Web Designer',
     company: 'Group project',
     quote: 'An exceptional developer who consistently delivers high-quality work. Their attention to detail and problem-solving skills are outstanding.',
-    image: Logo,
+    image: logo,
   },
   {
     name: 'Rahat Hasan',
     role: 'Digital Marketer',
     company: 'Startup Inc',
     quote: 'Working with this developer was a pleasure. They understood our requirements perfectly and delivered beyond our expectations.',
-    image: Logo,
+    image: logo,
   },
   {
     name: '',
     role: 'Freelancer',
     company: 'Fiver',
     quote: 'A true professional who brings creativity and technical expertise to every project. Their code is clean, maintainable, and well-documented.',
-    image: Logo,
+    image: logo,
   },
 ];
 
