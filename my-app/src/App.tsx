@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import Navbar from './Components/NavBar'
 import Hero from './sections/Hero'
 import About from './sections/About'
@@ -9,10 +8,8 @@ import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import { ThemeProvider } from './utils/ThemeContext'
-import { useTheme } from './utils/ThemeContext'
 
 function AppContent() {
-  const { theme } = useTheme();
   
   return (
     <div className="min-h-screen">
