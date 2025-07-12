@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import type { Testimonial } from '../types';
-import logo from '../assets/logo.png';
+import logo from '../assets/Logo.png';
 
 const testimonials: Testimonial[] = [
   {
