@@ -22,10 +22,10 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link
               to="hero"
-              className="text-xl font-bold text-gray-900 dark:text-white cursor-pointer"
+              className="text-xl font-bold text-gray-900 dark:text-white cursor-pointer font-mono"
               duration={400}
             >
-               CWB
+              {"< Bishal Shahi />"}
             </Link>
           </div>
 
