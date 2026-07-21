@@ -67,8 +67,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative w-full max-w-[400px] shrink-0 pt-4">
-            <div className="absolute -top-1 left-4 z-10 bg-white dark:bg-gray-800 px-3 py-1.5 rounded-md shadow-sm border-l-4 border-blue-500">
+          <div className="relative w-full max-w-[400px] shrink-0 pt-10">
+            <div className="absolute -top-1 left-4 z-10 bg-white dark:bg-gray-800  px-3 py-1.5 rounded-md shadow-sm border-l-4 border-blue-500 hover:border-b-4 hover:border-blue-500 transition-all duration-300">
               <span className="text-sm font-semibold text-gray-900 dark:text-white">
                 Personal details
               </span>

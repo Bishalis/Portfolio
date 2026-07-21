@@ -1,5 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import {
+  HiHome,
+  HiUser,
+  HiCodeBracket,
+  HiFolder,
+  HiBriefcase,
+  HiEnvelope,
+} from 'react-icons/hi2';
 import { useTheme } from '../utils/ThemeContext';
 
 const Navbar = () => {
@@ -7,13 +15,17 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
 
   const navItems = [
-    { name: 'Home', to: 'hero' },
-    { name: 'About', to: 'about' },
-    { name: 'Skills', to: 'skills' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Experience', to: 'experience' },
-    { name: 'Contact', to: 'contact' },
+    { name: 'Home', to: 'hero', icon: HiHome },
+    { name: 'About', to: 'about', icon: HiUser },
+    { name: 'Skills', to: 'skills', icon: HiCodeBracket },
+    { name: 'Projects', to: 'projects', icon: HiFolder },
+    { name: 'Experience', to: 'experience', icon: HiBriefcase },
+    { name: 'Contact', to: 'contact', icon: HiEnvelope },
   ];
+
+  const linkClass =
+    'flex items-center gap-1.5 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer transition-colors';
+  const activeClass = '!text-blue-600 dark:!text-blue-400 font-semibold';
 
   return (
     <nav className="fixed w-full bg-white dark:bg-gray-900 shadow-sm z-50">
@@ -22,25 +34,36 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link
               to="hero"
+              spy={true}
+              smooth={true}
+              offset={-64}
               className="text-xl font-bold text-gray-900 dark:text-white cursor-pointer font-mono"
               duration={400}
             >
-              {"< Bishal Shahi />"}
+              {'< Bishal Shahi />'}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.to}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white cursor-pointer"
-                duration={400}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center space-x-6">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  spy={true}
+                  smooth={true}
+                  offset={-64}
+                  duration={400}
+                  className={linkClass}
+                  activeClass={activeClass}
+                >
+                  <Icon className="h-4 w-4" />
+                  {item.name}
+                </Link>
+              );
+            })}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -120,18 +143,25 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.to}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white cursor-pointer"
-              smooth={true}
-              duration={500}
-              onClick={() => setIsOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                key={item.name}
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={-64}
+                duration={500}
+                className={`flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium ${linkClass}`}
+                activeClass={activeClass}
+                onClick={() => setIsOpen(false)}
+              >
+                <Icon className="h-5 w-5" />
+                {item.name}
+              </Link>
+            );
+          })}
           <button
             onClick={toggleTheme}
             className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
