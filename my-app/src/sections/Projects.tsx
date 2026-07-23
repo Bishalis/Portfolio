@@ -4,6 +4,8 @@ import type { Project } from '../types';
 import Ecommerce from '../assets/Ecommerce.png';
 import Weather from '../assets/Weather.png';
 import Bookstore from '../assets/Bookstore.png';
+import { Title } from '../Components/Title';
+import HoverBorderEffect from '../Components/HoverBorderEffect';
 
 const projects: Project[] = [
   {
@@ -40,13 +42,16 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
   });
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="card"
+    <div
+      className="card group relative rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
     >
+         <HoverBorderEffect/>
+      <motion.div
+        className="relative w-full h-full"
+        initial={{ opacity: 0 }}
+        animate={ {opacity: 1 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
       <div className="relative h-48">
         <img
           src={project.image}
@@ -92,7 +97,10 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           )}
         </div>
       </div>
-    </motion.div>
+      </motion.div>
+
+      
+    </div>
   );
 };
 
@@ -103,8 +111,8 @@ const Projects = () => {
   });
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
@@ -112,10 +120,7 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Projects
-          </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <Title title="FeaturedProjects" className="left-auto top-10"/>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

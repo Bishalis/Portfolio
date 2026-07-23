@@ -1,0 +1,59 @@
+export default function HoverBorderEffect() {
+    return(
+        <>
+             <div
+                className="
+      absolute
+      inset-0
+      opacity-0
+      transition-opacity
+      duration-500
+      group-hover:opacity-100
+      pointer-events-none
+      bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.18),transparent_60%)]
+    "
+              />
+
+              {/* Animated Left Border */}
+              <span
+                className="
+      absolute
+      left-0
+      top-0
+      w-[4px]
+      h-0
+      rounded-full
+      bg-gradient-to-b
+      from-cyan-400
+      to-blue-600
+      shadow-[0_0_15px_rgba(59,130,246,0.8)]
+      transition-all
+      duration-300
+      ease-out
+      group-hover:h-full
+    "
+              />
+
+              {/* Animated Bottom Border */}
+              <span
+                className="
+      absolute
+      left-0
+      bottom-0
+      h-[4px]
+      w-0
+      rounded-full
+      bg-gradient-to-r
+      from-cyan-400
+      to-blue-600
+      shadow-[0_0_15px_rgba(59,130,246,0.8)]
+      transition-all
+      duration-300
+      delay-300
+      ease-out
+      group-hover:w-full
+    "
+              />
+        </>
+    )
+}
