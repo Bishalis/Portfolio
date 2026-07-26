@@ -1,105 +1,114 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import type { Project } from '../types';
-import Ecommerce from '../assets/Ecommerce.png';
-import Weather from '../assets/Weather.png';
-import Bookstore from '../assets/Bookstore.png';
-import { Title } from '../Components/Title';
-import HoverBorderEffect from '../Components/HoverBorderEffect';
+import { motion } from "framer-motion";
+import type { Project } from "../types";
+import { useInView } from "react-intersection-observer";
+import Ecommerce from "../assets/Ecommerce.png";
+import tisacleaning from "../assets/tisacleaning.png";
+import resumeAnalyser from "../assets/resumeAnalyser.png";
+import Bookstore from "../assets/Bookstore.png";
+import { Title } from "../Components/Title";
+import HoverBorderEffect from "../Components/HoverBorderEffect";
+import { useState } from "react";
 
 const projects: Project[] = [
   {
-    title: 'CWB E-commerce Platform',
-    description: 'A full-stack e-commerce platform with user authentication, product management, and payment integration.',
-    image: Ecommerce,
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/Bishalis/updated-Ecommerce',
-    liveUrl: 'https://updated-ecommerce-frontend.onrender.com/login',
-  },
-  {
-    title: 'CWB Book Store',
-    description: 'A collaborative task management application with real-time updates and team features.',
-    image: Weather,
-    technologies: ['React', 'Firebase', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/Bishalis/BookStore',
-    liveUrl: 'https://taskmanager-demo.com',
+    title: "Professional Cleaning Services",
+    description:
+      "A professional cleaning services website that allows users to book cleaning appointments and manage their services.",
+    image: tisacleaning,
+    technologies: ["Nextjs", "Tailwind", "TypeScript", "Resend"],
+    githubUrl: "https://github.com/Bishalis/cleaningCo",
+    liveUrl: "https://www.tisacleaning.com.au/",
   },
 
   {
-    title: 'CWB Weather Dashboard',
-    description: 'A weather dashboard that displays current and forecasted weather data using external APIs.',
-    image: Bookstore,
-    technologies: ['React', 'OpenWeather API', 'Chart.js'],
-    githubUrl: 'https://github.com/Bishalis/Portfolio',
-    liveUrl: 'https://weather-demo.com',
+    title: "Resume Analyzer",
+    description:
+      "A resume analyzer that uses AI to analyze resumes and provide feedback on how to improve them with score.",
+    image: resumeAnalyser,
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "OpenAI API",
+    ],
+    githubUrl: "https://github.com/Bishalis/Resume-ai",
+    liveUrl: "https://resume-661u9ni5d-bishalis-projects.vercel.app/",
+  },
+
+  {
+    title: "E-commerce Website",
+    description:
+      "A fully functional e-commerce website with product listings, shopping cart, and checkout functionality.",
+    image: Ecommerce,
+    technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
+    githubUrl: "https://github.com/Bishalis/Ecommerce-App",
+    liveUrl: "https://ecommerce-demo.com",
   },
 ];
 
-const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
+const ProjectCard = ({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) => {
   return (
-    <div
-      className="card group relative rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
-    >
-         <HoverBorderEffect/>
+    <div className="card group relative rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+      <HoverBorderEffect />
       <motion.div
         className="relative w-full h-full"
         initial={{ opacity: 0 }}
-        animate={ {opacity: 1 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
       >
-      <div className="relative h-48">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-          {project.title}
-        </h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4">
-          {project.description}
-        </p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm"
-            >
-              {tech}
-            </span>
-          ))}
+        <div className="relative overflow-hidden rounded-xl h-72 group">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="absolute top-0 left-0 w-full transition-transform duration-[5000ms] ease-linear group-hover:-translate-y-[calc(100%-18rem)]"
+          />
         </div>
-        <div className="flex space-x-4">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            GitHub
-          </a>
-          {project.liveUrl && (
+        <div className="p-6">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            {project.title}
+          </h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            {project.description}
+          </p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex space-x-4">
             <a
-              href={project.liveUrl}
+              href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 dark:text-blue-400 hover:underline"
             >
-              Live Demo
+              GitHub
             </a>
-          )}
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Live Demo
+              </a>
+            )}
+          </div>
         </div>
-      </div>
       </motion.div>
-
-      
     </div>
   );
 };
@@ -110,8 +119,17 @@ const Projects = () => {
     threshold: 0.1,
   });
 
+  const [view, setView] = useState(false);
+
+  const toggleViewAllProject = () => {
+    setView(!view);
+  };
+
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 relative">
+    <section
+      id="projects"
+      className="py-20 bg-gray-50 dark:bg-gray-900 relative"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <motion.div
           ref={ref}
@@ -120,17 +138,26 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <Title title="FeaturedProjects" className="left-auto top-10"/>
+          <Title title="Featured Projects" className="left-auto top-10" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+         {view? (projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
-          ))}
+          ))) :(projects.slice(0, 2).map((project, index) => (
+             <ProjectCard key={project.title} project={project} index={index} />
+          )))}
         </div>
+    
+        <button
+          onClick={toggleViewAllProject}
+          className="absolute bottom-5 left-1/2 transform -translate-x-1/2 translate-y-1/2 text-blue-500 px-4 py-2 rounded-md"
+        >
+          {view ? "< Hide Projects />" :"`< View All Projects />"}
+        </button>
       </div>
     </section>
   );
 };
 
-export default Projects; 
+export default Projects;

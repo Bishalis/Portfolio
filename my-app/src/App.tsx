@@ -21,7 +21,7 @@ function AppContent() {
           <Skills />
           <Projects />
           <Experience />
-          <Testimonials />
+          {/* <Testimonials /> */}
           <Contact />
         </main>
         <Footer />
