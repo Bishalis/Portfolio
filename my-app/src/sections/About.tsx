@@ -30,36 +30,37 @@ const About = () => {
           className="text-center mb-16"
         >
           <div className="relative flex justify-center items-center">
-            <Title title="About Me" className="left-0"/>
+            <Title title="About Me" className="left-0" />
           </div>
         </motion.div>
 
-     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-  <motion.div
-    initial={{ opacity: 0, x: -20 }}
-    animate={inView ? { opacity: 1, x: 0 } : {}}
-    transition={{ duration: 0.5, delay: 0.2 }}
-  >
-    <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-      I'm a passionate Full Stack Developer with a strong foundation in both
-      frontend and backend technologies. With a keen eye for design and a
-      commitment to writing clean, efficient code, I strive to create seamless
-      user experiences that make a difference.
-    </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              I'm a passionate Full Stack Developer with a strong foundation in
+              both frontend and backend technologies. With a keen eye for design
+              and a commitment to writing clean, efficient code, I strive to
+              create seamless user experiences that make a difference.
+            </p>
 
-    <p className="text-lg text-gray-600 dark:text-gray-300">
-      Beyond the screen, I have a love for football, which keeps me active and
-      sharp both mentally and physically. I’m currently expanding my skillset
-      by diving into the world of Artificial Intelligence, exploring how it can
-      be integrated efficiently into real-world applications to improve user
-      experiences and optimize performance. Whether it’s writing clean code or
-      learning how AI can enhance development workflows, I’m always driven by
-      curiosity and a desire to grow.
-    </p>
-  </motion.div>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Beyond the screen, I have a love for football, which keeps me
+              active and sharp both mentally and physically. I’m currently
+              expanding my skillset by diving into the world of Artificial
+              Intelligence, exploring how it can be integrated efficiently into
+              real-world applications to improve user experiences and optimize
+              performance. Whether it’s writing clean code or learning how AI
+              can enhance development workflows, I’m always driven by curiosity
+              and a desire to grow.
+            </p>
+          </motion.div>
 
-  <Experience />
-</div>
+          <Experience />
+        </div>
       </div>
     </section>
   );
