@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Profile from "../assets/myProfile.jpg";
 import { Title } from "../Components/Title";
 import HoverBorderEffect from "../Components/HoverBorderEffect";
+import { useState, useEffect } from "react";
 
 const socialLinks = [
   {
@@ -25,6 +26,17 @@ const socialLinks = [
 ];
 
 const Hero = () => {
+  const titles = ["Full Stack Developer", "Software Engineer"];
+
+  const [currentTitle, setCurrentTitle] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitle((prev) => (prev + 1) % titles.length);
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section
       id="hero"
@@ -39,13 +51,21 @@ const Hero = () => {
         >
           <div className="flex-1 text-center lg:text-left flex flex-col justify-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Hi, I'm{" "}
-              <span className="text-blue-600 dark:text-blue-400">
-                Bishal Shahi
-              </span>
+              Hi, I'm Bishal Shahi
             </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-600 dark:text-gray-300 mb-8">
-              Full Stack Developer
+            <h2 className="text-2xl sm:text-3xl md:text-4xl text-blue-600 dark:text-blue-400 mb-8 h-12 flex items-center justify-center lg:justify-start overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={titles[currentTitle]}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.35 }}
+                  className="absolute"
+                >
+                  {titles[currentTitle]}
+                </motion.span>
+              </AnimatePresence>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto lg:mx-0">
               I build modern, responsive, and user-friendly web applications
@@ -72,7 +92,7 @@ const Hero = () => {
           </div>
 
           <div className="relative w-full max-w-[450px] shrink-0 pt-10">
-           <Title title="Profile"/>
+            <Title title="Profile" />
 
             <div
               className="
@@ -98,7 +118,7 @@ const Hero = () => {
     hover:shadow-[0_20px_60px_rgba(0,0,0,0.18)]
   "
             >
-            <HoverBorderEffect/>
+              <HoverBorderEffect />
 
               {/* Profile Image */}
               <div className="relative group">
