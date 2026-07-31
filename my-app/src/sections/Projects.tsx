@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import Ecommerce from "../assets/Ecommerce.png";
 import tisacleaning from "../assets/tisacleaning.png";
 import resumeAnalyser from "../assets/resumeAnalyser.png";
-import Bookstore from "../assets/Bookstore.png";
 import { Title } from "../Components/Title";
 import HoverBorderEffect from "../Components/HoverBorderEffect";
 import { useState } from "react";

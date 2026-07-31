@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Title } from "../Components/Title";
-import HoverBorderEffect from "../Components/HoverBorderEffect";
 import Experience from "./Experience";
 
 const About = () => {
@@ -10,14 +9,6 @@ const About = () => {
     threshold: 0.1,
   });
 
-  const softSkills = [
-    "Problem Solving",
-    "Communication",
-    "Team Collaboration",
-    "Time Management",
-    "Adaptability",
-    "Attention to Detail",
-  ];
 
   return (
     <section id="about" className="py-10 bg-gray-50 dark:bg-gray-800">
