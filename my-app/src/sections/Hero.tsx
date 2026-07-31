@@ -69,7 +69,7 @@ const Hero = () => {
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto lg:mx-0">
               I build modern, responsive, and user-friendly web applications
-              using cutting-edge technologies.
+              using cutting-edge technologies .
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
