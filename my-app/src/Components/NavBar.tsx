@@ -5,7 +5,6 @@ import {
   HiUser,
   HiCodeBracket,
   HiFolder,
-  HiBriefcase,
   HiEnvelope,
 } from 'react-icons/hi2';
 import { useTheme } from '../utils/ThemeContext';
@@ -19,7 +18,6 @@ const Navbar = () => {
     { name: 'About', to: 'about', icon: HiUser },
     { name: 'Skills', to: 'skills', icon: HiCodeBracket },
     { name: 'Projects', to: 'projects', icon: HiFolder },
-    { name: 'Experience', to: 'experience', icon: HiBriefcase },
     { name: 'Contact', to: 'contact', icon: HiEnvelope },
   ];
 
