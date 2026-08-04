@@ -42,7 +42,7 @@ const projects: Project[] = [
     image: Ecommerce,
     technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
     githubUrl: "https://github.com/Bishalis/Ecommerce-App",
-    liveUrl: "https://ecommerce-demo.com",
+    liveUrl: "https://updated-ecommerce-frontend.onrender.com/",
   },
 ];
 
