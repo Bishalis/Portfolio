@@ -221,11 +221,10 @@ const Hero = () => {
               </div>
 
               {/* Resume Button */}
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                className="
+              <a href="https://drive.google.com/file/d/1N_XVFP7A3Qp6WlNiBR51KYe14uucPWEq/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+
+                <div
+                  className="
       relative
       z-10
       overflow-hidden
@@ -249,9 +248,10 @@ const Hero = () => {
       hover:bg-white
       dark:hover:bg-gray-800
     "
-              >
-                View Resume
-              </Link>
+                >
+                  View Resume
+                </div>
+              </a>
             </div>
           </div>
         </motion.div>
