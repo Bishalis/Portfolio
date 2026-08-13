@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 
+dotenv.config({ path: '.env.local' });
 dotenv.config();
 
 function getRequiredEnv(name: 'OPENAI_API_KEY' | 'FRONTEND_ORIGIN'): string {
